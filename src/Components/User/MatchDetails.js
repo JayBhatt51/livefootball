@@ -14,7 +14,7 @@ const MatchDetails = () => {
   useEffect(() => {
     const fetchMatchUrl = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/user/match/${id}/link`);
+        const response = await axios.get(`https://livefootball-backend.onrender.com/user/match/${id}/link`);
         setMatchUrl(response.data.url);
       } catch (error) {
         console.error('Error fetching match URL:', error);

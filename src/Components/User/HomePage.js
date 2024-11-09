@@ -15,7 +15,7 @@ const HomePage = () => {
 
   const fetchMatches = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/user/matches');
+      const response = await axios.get('https://livefootball-backend.onrender.com/user/matches');
       setMatches(response.data);
     } catch (error) {
       console.error('Error fetching matches:', error);
@@ -32,7 +32,7 @@ const HomePage = () => {
 
   const handleAdminRefresh = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/admin/fetch-and-store', { passcode });
+      const response = await axios.post('https://livefootball-backend.onrender.com/admin/fetch-and-store', { passcode });
       if (response.status === 200) {
         setErrorMessage('');
         setRefreshMessage('Matches updated successfully!');
